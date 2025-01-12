@@ -1,6 +1,8 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
+RUN apk update && apk upgrade
+
 # Copy data for add-on
 COPY rootfs /
 #install git
